@@ -1,9 +1,19 @@
 import { UserAuthApi } from "@/data/api/users/auth";
 import { useAppDispatch, useAppSelector } from "@/sp/hooks";
 import { Sign_Out_Success, UserSelector } from "@/sp/redux/slice/users";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import { Button, Container, Dropdown, Nav, Navbar } from "react-bootstrap";
+import {
+  Button,
+  Container,
+  Dropdown,
+  Form,
+  InputGroup,
+  Nav,
+  NavDropdown,
+  Navbar,
+} from "react-bootstrap";
 
 const Hearder = () => {
   const User = useAppSelector(UserSelector.User);
@@ -16,131 +26,94 @@ const Hearder = () => {
 
   const router = useRouter();
   return (
-    <div id="hearder">
-      <Navbar
-        collapseOnSelect
-        expand="xl"
-        className="bg_blue_300"
-        variant="dark"
-      >
-        <Container>
-          <Navbar.Brand href="/">
-            <div className="logo">
-              <h1>DOITHE/247</h1>
-              <span>www.doithe247.com.vn</span>
+    <div id="hearder" className="bg_white bsd">
+      <div className="header_top bg_black">
+        <div className="w-95">
+          <div className="header_top_content">
+            <div className="top_left">
+              <span>Free shipping on domestic orders over $150</span>
             </div>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <div className="top_right">
+              <Link className="nav_link" href={"/auth"}>
+                SIGN IN
+              </Link>
+              <Link className="nav_link" href={"/auth"}>
+                CONTACT US
+              </Link>
+              <Link className="nav_link" href={"/auth"}>
+                FAQ
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
 
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link
-                className={router.asPath === "/" ? "li_active" : "hearder_link"}
-                href="/"
-              >
-                Home
-              </Nav.Link>
+      <div className="header_main">
+        <div className="w-95">
+          <Navbar
+            collapseOnSelect
+            expand="xl"
+            className="bg_white nav_top"
+            variant="light"
+          >
+            <Navbar.Brand className="me-4" href="/">
+              <div className="logo">
+                <h1>M01</h1>
+              </div>
+            </Navbar.Brand>
 
-              <Nav.Link
-                className={
-                  router.asPath === "/doi-the" ? "li_active" : "hearder_link"
-                }
-                href="/doi-the"
-              >
-                Đổi thẻ
-              </Nav.Link>
-              <Nav.Link
-                className={
-                  router.asPath === "/mua-the" ? "li_active" : "hearder_link"
-                }
-                href="/mua-the"
-              >
-                Mua thẻ
-              </Nav.Link>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" id="btn_responsive">
+              <span className="material-symbols-outlined">subject</span>
+            </Navbar.Toggle>
 
-              <Nav.Link
-                className={
-                  router.asPath === "/nap-tien" ? "li_active" : "hearder_link"
-                }
-                href="/nap-tien"
-              >
-                Nạp Tiền
-              </Nav.Link>
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="me-auto my-2 my-lg-0 nav_left" navbarScroll>
+                <Nav.Link className="nav_link" href="#action1">
+                  Home
+                </Nav.Link>
+                <Nav.Link className=" nav_link" href="#action2">
+                  Collections
+                </Nav.Link>
+                <Nav.Link className=" nav_link" href="#action2">
+                  For Womens
+                </Nav.Link>
+                <Nav.Link className=" nav_link" href="#action2">
+                  For Mens
+                </Nav.Link>
+                <Nav.Link className=" nav_link" href="#action2">
+                  For Kids
+                </Nav.Link>
+                <Nav.Link className=" nav_link" href="#action2">
+                  Accessories
+                </Nav.Link>
+              </Nav>
 
-              <Nav.Link
-                className={
-                  router.asPath === "/rut-tien" ? "li_active" : "hearder_link"
-                }
-                href="/rut-tien"
-              >
-                Rút Tiền
-              </Nav.Link>
-
-              <Nav.Link
-                className={
-                  router.asPath === "/connect-api"
-                    ? "li_active"
-                    : "hearder_link"
-                }
-                href="/connect-api"
-              >
-                Api
-              </Nav.Link>
-              <Nav.Link
-                className={
-                  router.asPath === "/lien-he" ? "li_active" : "hearder_link"
-                }
-                href="/lien-he"
-              >
-                Liên hệ
-              </Nav.Link>
-            </Nav>
-            <Nav>
-              {accessToken && User ? (
-                <>
-                  <Dropdown>
-                    <Dropdown.Toggle variant="success" id="dropdown-basic">
-                      {User?.username?.toLocaleUpperCase()} {User?.surplus}
-                    </Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                      <Dropdown.Item
-                        href={`/${User?.username}/thong-tin-tai-khoan`}
-                      >
-                        Thông tin tài khoản
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Quỷ số dư</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">
-                        Something else
-                      </Dropdown.Item>
-                      <Button onClick={handleSign_Out}>Đăng xuất</Button>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </>
-              ) : (
-                <>
-                  <Nav.Link
-                    className="ms-5 btn_success d-flex align-items-center"
-                    href="/auth/sign-in"
-                  >
+              <Nav className="ms-auto my-2 my-lg-0 nav_right" navbarScroll>
+                <Nav.Link onClick={() => alert("he")} className="nav_link">
+                  <span className="d-flex">
                     <span className="material-symbols-outlined me-2">
-                      person
+                      search
                     </span>
-                    <span className="me-2"> Sign In</span>
-                  </Nav.Link>
-                  <Nav.Link
-                    className="btn_success_active d-flex align-items-center"
-                    href="/auth/sign-up"
-                  >
-                    <span className="material-symbols-outlined me-2">lock</span>
-                    <span className="me-2">Sign Up</span>
-                  </Nav.Link>
-                </>
-              )}
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+                    <span>Search</span>
+                  </span>
+                </Nav.Link>
+                <Nav.Link className="nav_link" href="#action2">
+                  Wishlist
+                </Nav.Link>
+
+                <Nav.Link onClick={() => alert("he")} className="nav_link">
+                  <span className="d-flex">
+                    <span className="material-symbols-outlined me-2">
+                      shopping_bag
+                    </span>
+                    <span className="m-0 p-0">0/0.00</span>
+                  </span>
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </div>
+      </div>
     </div>
   );
 };

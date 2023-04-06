@@ -1,15 +1,57 @@
 #home_page {
-  // width: min(85vw, 900px);
-  // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  .home_content {
-    position: absolute;
-
-    height: min(50%, 500px);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    padding: 2rem;
-    border-radius: 7px;
+  .discount {
+    .discount_item {
+      text-align: center;
+      &:hover {
+        .item_content {
+          .overlay {
+            &:hover {
+              &::after {
+                transform: translateX(12%);
+                background-color: rgb(190, 81, 99);
+                border: none;
+              }
+            }
+          }
+        }
+      }
+      .item_content {
+        position: relative;
+        .overlay {
+          margin: 0 auto;
+          width: 109px;
+          height: 109px;
+          background-color: pink;
+          border-radius: 100%;
+          &::after {
+            content: "";
+            width: 109px;
+            height: 109px;
+            display: block;
+            border: 2px solid rgb(190, 81, 99);
+            border-radius: 100%;
+            transform: translateX(-12%);
+            transition: 0.5s;
+          }
+        }
+        .discount_info {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-7%, -50%);
+          h4 {
+            font-family: mon_regular;
+            font-size: 38px;
+            line-height: 0.5;
+          }
+          span {
+            font-family: mon_thin;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
   }
 }

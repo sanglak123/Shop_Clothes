@@ -6,15 +6,16 @@
 
 //layout
 @import "./layouts/button";
+@import "./layouts/card_fashion";
 
 //components
 @import "./components/hearder";
+@import "./components/footer";
 @import "./components/carousels";
-
-//Dashboard
 
 //pages
 @import "./pages/home_page";
 @import "./pages/sign-in";
+@import "./pages/404";
 
 //themes

@@ -8,6 +8,13 @@ $blue_100: #8fb5f8;
 
 $purple: #4608ad;
 
+$gray_300: #4c4c4c;
+$gray_400: #757575;
+$gray_500: #969696;
+
+$green_100: #939305;
+$green_200: #afaf01;
+
 //font
 @font-face {
   font-family: anton_black;
@@ -26,4 +33,22 @@ $purple: #4608ad;
 @font-face {
   font-family: open_sans_medium;
   src: url("/font/OpenSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: mon_light;
+  src: url("/font/Montserrat-Light.ttf");
+}
+@font-face {
+  font-family: mon_thin;
+  src: url("/font/Montserrat-Thin.ttf");
+}
+@font-face {
+  font-family: mon_regular;
+  src: url("/font/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: mon_bold;
+  src: url("/font/Montserrat-ExtraBold.ttf");
 }

@@ -46,3 +46,33 @@
     border: none;
   }
 }
+
+.btn_white {
+  background-color: white;
+  font-size: 1rem;
+  color: $gray_300;
+  padding: 0.8rem;
+  width: 150px;
+  margin: 0 0.5rem;
+  border: none;
+  transition: 0.5s;
+  &:hover {
+    color: $green_100;
+  }
+}
+
+.btn_over {
+  background-color: $green_100;
+  border-radius: 0;
+  color: white;
+  font-size: 1rem;
+  padding: 0.8rem;
+  width: 150px;
+  margin: 0 0.5rem;
+  border: none;
+  transition: 0.5s;
+  &:hover {
+    background-color: $green_200;
+    color: $gray_300;
+  }
+}

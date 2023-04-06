@@ -1,28 +1,81 @@
 #hearder {
-  .hearder_link {
-    margin: 0 0.6rem !important;
-    &::after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 2px;
-      background-color: white;
-      transition: 0.5s;
+  .header_top {
+    padding: 0.3rem 0;
+    @media only screen and (max-width: 1200px) {
+      display: none;
     }
-    &:hover {
-      &::after {
-        width: 100%;
+    .header_top_content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      padding: 0.3rem 0;
+      .top_left {
+        font-family: mon_light;
+        font-size: 13px;
+      }
+      .top_right {
+        a {
+          text-decoration: none;
+          color: white;
+          font-family: mon_light;
+          font-size: 15px;
+          letter-spacing: 1px;
+          margin: 0 10px;
+          padding: 0;
+        }
       }
     }
   }
-  .li_active {
-    color: white;
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: white;
+  .header_main {
+    .logo {
+      h1 {
+        font-family: anton_black;
+        font-size: 26px;
+        letter-spacing: 5px;
+        color: black;
+      }
+    }
+
+    .nav_link {
+      color: $gray_300;
+      font-family: mon_regular;
+      font-size: 1rem;
+      transition: 0.5s;
+      &::after {
+        content: "";
+        display: block;
+        width: 0%;
+        height: 1px;
+        background-color: black;
+        transition: 0.5s;
+      }
+      &.active,
+      &:hover {
+        color: black;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    .nav_right {
+      button {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.5s;
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: black;
+          transition: 0.5s;
+        }
+      }
     }
   }
 }

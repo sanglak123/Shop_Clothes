@@ -1,21 +1,29 @@
-.carousel {
-  margin: 2rem auto;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  .carousel-indicators {
-  }
-  .carousel-inner {
-    .carousel-item {
-      img {
-        max-width: 100%;
-        margin: 0 auto;
-        border-radius: 7px;
-      }
+#carousels {
+  #first_item {
+    position: relative;
+    #first_item_caption {
+      position: absolute;
+      width: clam(300px, 400px, 800px);
+      top: 50%;
+      left: 50%;
+      transform: translate(0, -50%);
       .item_text {
-        width: clam(150px, 30%, 400px) !important;
+        p:first-child {
+          font-size: 30px;
+          font-family: mon_regular;
+          margin: 0;
+        }
+        h3 {
+          font-size: 95px;
+          font-family: mon_bold;
+          margin: 0;
+        }
+        .collection_name {
+          font-size: 35px;
+          font-family: mon_regular;
+          margin: 0;
+        }
       }
     }
-  }
-  .carousel-control-next,
-  .carousel-control-prev {
   }
 }

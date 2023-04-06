@@ -1,0 +1,15 @@
+#page_not_found {
+  .page_not_found_content {
+    height: 450px;
+    padding: 1.5rem;
+    position: relative;
+    .page_not_found_item {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(141, 5, 5);
+      text-align: center;
+    }
+  }
+}

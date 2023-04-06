@@ -1,113 +1,131 @@
 import Link from "next/link";
 import React from "react";
+import { Col, Row } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <div id="footer">
-      <footer className="text-center text-lg-start bg-light text-muted">
-        <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom bg_blue_300 txt_white">
-          <div className="me-5 d-none d-lg-block">
-            <span>Get connected with us on social networks:</span>
-          </div>
-
-          <div>
-            <Link className="me-4 text-reset" href={"/"}>
-              <i className="fab fa-facebook-f"></i>
-            </Link>
-
-            <Link className="me-4 text-reset" href={"/"}>
-              <i className="fab fa-twitter"></i>
-            </Link>
-
-            <Link className="me-4 text-reset" href={"/"}>
-              <i className="fab fa-google"></i>
-            </Link>
-
-            <Link className="me-4 text-reset" href={"/"}>
-              <i className="fab fa-instagram"></i>
-            </Link>
-
-            <Link className="me-4 text-reset" href={"/"}>
-              <i className="fab fa-linkedin"></i>
-            </Link>
-
-            <Link className="me-4 text-reset" href={"/"}>
-              <i className="fab fa-github"></i>
-            </Link>
-          </div>
-        </section>
-
-        <section className="">
-          <div className="container text-center text-md-start mt-5">
-            <div className="row mt-3">
-              <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                <h6 className="text-uppercase fw-bold mb-4">
-                  <i className="fas fa-gem me-3"></i>Company name
-                </h6>
-                <p>
-                  Here you can use rows and columns to organize your footer
-                  content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                  elit.
-                </p>
+    <div id="footer" className="bg_black">
+      <div className="w-95">
+        <div className="footer_main p-4">
+          <Row>
+            <Col xs={3}>
+              <div className="footer_item">
+                <div className="logo">
+                  <h1>M01</h1>
+                  <span>FASHION</span>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Veritatis vero doloribus quisquam delectus praesentium quis
+                    libero at aperiam voluptate dignissimos.
+                  </p>
+                </div>
               </div>
+            </Col>
 
-              <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 className="text-uppercase fw-bold mb-4">Products</h6>
-                <p>
-                  <Link href={"/"}>Angular</Link>
-                </p>
-                <p>
-                  <Link href={"/"}>React</Link>
-                </p>
-                <p>
-                  <Link href={"/"}>Vue</Link>
-                </p>
-                <p>
-                  <Link href={"/"}>Laravel</Link>
-                </p>
+            <Col xs={3}>
+              <div className="footer_item">
+                <h4>LOCATE US</h4>
+                <div className="footer_link">
+                  <div className="link_item">
+                    <Link href={"/"}>
+                      <span className="material-symbols-outlined">
+                        distance
+                      </span>
+                      <span>487 Eighth Avenue West Street, New York</span>
+                    </Link>
+                  </div>
+
+                  <div className="link_item">
+                    <Link href={"/"}>
+                      <span className="material-symbols-outlined">phone</span>
+                      <span>+84 123456789</span>
+                    </Link>
+                  </div>
+
+                  <div className="link_item">
+                    <Link href={"/"}>
+                      <span className="material-symbols-outlined">email</span>
+                      <span>admin@gmail.com</span>
+                    </Link>
+                  </div>
+                </div>
               </div>
+            </Col>
 
-              <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
-                <p>
-                  <Link href={"/"}>Pricing</Link>
-                </p>
-                <p>
-                  <Link href={"/"}> Settings</Link>
-                </p>
-                <p>
-                  <Link href={"/"}> Orders</Link>
-                </p>
-                <p>
-                  <Link href={"/"}> Help</Link>
-                </p>
+            <Col xs={3}>
+              <div className="footer_item">
+                <h4>QUICK LINKS</h4>
+                <div className="footer_link">
+                  <div className="link_item">
+                    <Link href={"/collections"}>
+                      <span>Collections</span>
+                    </Link>
+                  </div>
+
+                  <div className="link_item">
+                    <Link href={"/for-woment"}>
+                      <span>For Women</span>
+                    </Link>
+                  </div>
+
+                  <div className="link_item">
+                    <Link href={"/for-men"}>
+                      <span>For Men</span>
+                    </Link>
+                  </div>
+
+                  <div className="link_item">
+                    <Link href={"/for-men"}>
+                      <span>For Kid</span>
+                    </Link>
+                  </div>
+
+                  <div className="link_item">
+                    <Link href={"/for-men"}>
+                      <span>Accessories</span>
+                    </Link>
+                  </div>
+                </div>
               </div>
+            </Col>
 
-              <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-                <p>
-                  <i className="fas fa-home me-3"></i> New York, NY 10012, US
-                </p>
-                <p>
-                  <i className="fas fa-envelope me-3"></i>
-                  info@example.com
-                </p>
-                <p>
-                  <i className="fas fa-phone me-3"></i> + 01 234 567 88
-                </p>
-                <p>
-                  <i className="fas fa-print me-3"></i> + 01 234 567 89
-                </p>
+            <Col xs={3}>
+              <div className="footer_item">
+                <h4>FEEDBACK</h4>
+                <div className="footer_link">
+                  <div className="link_item">
+                    <Link href={"/"}>
+                      <span className="material-symbols-outlined">
+                        distance
+                      </span>
+                      <span>487 Eighth Avenue West Street, New York</span>
+                    </Link>
+                  </div>
+
+                  <div className="link_item">
+                    <Link href={"/"}>
+                      <span className="material-symbols-outlined">phone</span>
+                      <span>+84 123456789</span>
+                    </Link>
+                  </div>
+
+                  <div className="link_item">
+                    <Link href={"/"}>
+                      <span className="material-symbols-outlined">email</span>
+                      <span>admin@gmail.com</span>
+                    </Link>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <div className="text-center p-4">
-          © 2021 Copyright:
-          <Link href="https://mdbootstrap.com/"> MDBootstrap.com</Link>
+            </Col>
+          </Row>
         </div>
-      </footer>
+        <div className="footer_bottom">
+          <span className="txt_center">
+            © 2018 Qode Interactive, All Rights Reserved
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
