@@ -1,0 +1,24 @@
+#collections {
+  .collections_content {
+    .collections_item {
+      position: relative;
+      margin: $mg10 0;
+      .overlay {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.479);
+      }
+      img {
+        width: 100%;
+      }
+      .item_title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include textStyle(mon_regular, $fs20, $fw7, $gray_400);
+      }
+    }
+  }
+}

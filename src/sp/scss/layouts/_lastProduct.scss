@@ -1,0 +1,47 @@
+.last_products {
+  padding: $pd20;
+  .last_products_header {
+    h4 {
+      @include textStyle(mon_regular, $fs20, $fw7, black);
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+      &:after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 1px;
+        background-color: $gray_400;
+        transition: 0.5s;
+      }
+    }
+  }
+  .last_products_main {
+    .last_products_item {
+      display: flex;
+      margin: $mg10 0;
+      .last_products_icon {
+        width: 30%;
+        margin: 0 $mg10;
+        img {
+          width: 100%;
+        }
+      }
+      .last_products_info {
+        h6 {
+          @include textStyle(mon_regular, $fs16, $fw7, black);
+        }
+        .rating {
+          color: rgb(241, 187, 7);
+        }
+        .prices {
+          span {
+            @include textStyle(mon_regular, $fs20, $fw7, black);
+          }
+        }
+      }
+    }
+  }
+}

@@ -8,21 +8,39 @@ const Footer = () => {
       <div className="w-95">
         <div className="footer_main p-4">
           <Row>
-            <Col xs={3}>
+            <Col xs={12} sm={12} md={6} xl={3}>
               <div className="footer_item">
                 <div className="logo">
                   <h1>M01</h1>
-                  <span>FASHION</span>
-                  <p>
+                  <p>FASHION</p>
+                  <p className="sologan">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Veritatis vero doloribus quisquam delectus praesentium quis
                     libero at aperiam voluptate dignissimos.
                   </p>
+                  <div className="logo_pay">
+                    <i
+                      className="fab fa-cc-jcb me-2 ms-2"
+                      style={{ fontSize: "2rem" }}
+                    ></i>
+                    <i
+                      className="fab fa-cc-paypal me-2 ms-2"
+                      style={{ fontSize: "2rem" }}
+                    ></i>
+                    <i
+                      className="fab fa-cc-mastercard me-2 ms-2"
+                      style={{ fontSize: "2rem" }}
+                    ></i>
+                    <i
+                      className="fab fa-cc-visa me-2 ms-2"
+                      style={{ fontSize: "2rem" }}
+                    ></i>
+                  </div>
                 </div>
               </div>
             </Col>
 
-            <Col xs={3}>
+            <Col xs={12} sm={12} md={6} xl={3}>
               <div className="footer_item">
                 <h4>LOCATE US</h4>
                 <div className="footer_link">
@@ -52,7 +70,7 @@ const Footer = () => {
               </div>
             </Col>
 
-            <Col xs={3}>
+            <Col xs={12} sm={12} md={6} xl={3}>
               <div className="footer_item">
                 <h4>QUICK LINKS</h4>
                 <div className="footer_link">
@@ -89,7 +107,7 @@ const Footer = () => {
               </div>
             </Col>
 
-            <Col xs={3}>
+            <Col xs={12} sm={12} md={6} xl={3}>
               <div className="footer_item">
                 <h4>FEEDBACK</h4>
                 <div className="footer_link">

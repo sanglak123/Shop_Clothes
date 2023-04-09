@@ -23,6 +23,20 @@ app.prepare().then(() => {
     return handle(req, res);
   });
 
+  const { sequelize } = require("./src/data/db/models");
+  const handleCheckDB = async () => {
+    sequelize
+      .authenticate()
+      .then(() => {
+        console.log("Connection has been established successfully.");
+      })
+      .catch((err) => {
+        console.error("Unable to connect to the database:", err);
+      });
+  };
+
+  handleCheckDB();
+
   server.listen(port, (err) => {
     if (err) throw err;
     console.log(`> Ready on http://${hostname}:${port}`);

@@ -1,29 +1,29 @@
 #footer {
   .footer_main {
     .footer_item {
-      padding: 1rem;
+      padding: $pd15;
       .logo {
         text-align: center;
         color: white;
         h1 {
-          font: anton_black !important;
-          font-size: 50px;
-          letter-spacing: 5px;
-          line-height: 0.4;
-        }
-        span {
-          letter-spacing: 5px;
+          @include textStyle(anton_black, $fs50, $fw4, white);
+          letter-spacing: 10px;
+          line-height: 0.6;
         }
         p {
-          font-size: 1rem;
-          font-family: mon_thin;
+          margin: 0;
+          @include textStyle(mon_thin, $fs16, $fw4, white);
+          letter-spacing: 7px;
+        }
+        .sologan {
+          margin: $mg10 0;
+          @include textStyle(mon_thin, $fs16, $fw4, white);
+          letter-spacing: 1px;
           font-style: italic;
         }
       }
       h4 {
-        font-size: 25px;
-        font-family: mon_regular;
-        color: white;
+        @include textStyle(mon_regular, $fs25, $fw7, white);
         margin-bottom: 1.2rem;
         &::after {
           content: "";
@@ -41,16 +41,27 @@
       }
       .footer_link {
         .link_item {
-          margin: 10px 0;
+          margin: $mg10 0;
+          padding-left: $pd20;
+          &::after {
+            content: "";
+            display: block;
+            width: 0%;
+            height: 1px;
+            background-color: $gray_400;
+            transition: 0.5s;
+          }
           &:hover {
+            &::after {
+              width: 100%;
+            }
             a {
               color: $gray_500;
+              transform: translateX(15px);
             }
           }
           a {
-            font-size: 1rem;
-            font-family: mon_thin;
-            color: white;
+            @include textStyle(mon_thin, $fs16, $fw4, white);
             text-decoration: none;
             display: flex;
             transition: 0.5s;

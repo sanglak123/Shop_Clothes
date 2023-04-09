@@ -1,52 +1,3 @@
-.btn_success {
-  background-color: $blue_300;
-  color: white;
-  padding: 0.7rem;
-  text-align: center;
-  border-radius: 7px;
-  border: 1px solid white;
-  min-width: 100px;
-  margin: 0.3rem;
-  transition: 0.5s;
-  &:hover {
-    background-color: $blue_200;
-  }
-}
-
-.btn_success_active {
-  background-color: $blue_300;
-  color: white;
-  padding: 0.7rem;
-  text-align: center;
-  border-radius: 7px;
-  border: 1px solid white;
-  min-width: 100px;
-  margin: 0.3rem;
-  transition: 0.5s;
-  &:hover {
-    background-color: white;
-    color: $blue_400;
-  }
-}
-
-.btn_cancle {
-  background-color: transparent;
-  color: red;
-  padding: 0.7rem;
-  text-align: center;
-  border-radius: 7px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  min-width: 100px;
-  margin: 0.3rem;
-  border: none;
-  transition: 0.5s;
-  &:hover {
-    background-color: red;
-    color: white;
-    border: none;
-  }
-}
-
 .btn_white {
   background-color: white;
   font-size: 1rem;
@@ -74,5 +25,22 @@
   &:hover {
     background-color: $green_200;
     color: $gray_300;
+  }
+}
+
+.btn_cancle {
+  border: 1px solid $green_100 !important;
+  background-color: transparent;
+  border-radius: 0;
+  color: red;
+  font-size: 1rem;
+  padding: 0.8rem;
+  width: 150px;
+  margin: 0 0.5rem;
+  border: none;
+  transition: 0.5s;
+  &:hover {
+    background-color: $green_200;
+    border: none;
   }
 }

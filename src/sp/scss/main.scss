@@ -1,21 +1,30 @@
 //abstracts
 @import "./variables/variable";
+@import "./mixin/mixin";
 
 //base
 @import "./base/reset";
 
 //layout
 @import "./layouts/button";
-@import "./layouts/card_fashion";
+@import "./layouts/cardFashion";
+@import "./layouts/feedBack";
+@import "./layouts/brands";
+@import "./layouts/paginations";
+@import "./layouts/lastProduct";
 
 //components
 @import "./components/hearder";
 @import "./components/footer";
 @import "./components/carousels";
 
+//Categorys
+@import "./components/categorys/collections";
+
 //pages
 @import "./pages/home_page";
-@import "./pages/sign-in";
+@import "./pages/auth";
+@import "./pages/cate";
 @import "./pages/404";
 
 //themes

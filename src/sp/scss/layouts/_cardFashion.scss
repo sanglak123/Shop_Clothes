@@ -21,7 +21,7 @@
         height: 50px;
         background-color: white;
         text-align: center;
-        margin: 10px 0;
+        margin: $mg10 0;
         transition: 0.5s;
         position: relative;
         &:hover {
@@ -60,7 +60,7 @@
       }
     }
     .card_img {
-      height: 560px;
+      max-height: 560px;
       overflow: hidden;
       img {
         width: 100%;
@@ -70,7 +70,7 @@
       padding: 1.5rem;
       h6 {
         font-family: mon_regular;
-        font-size: 23px;
+        font-size: $fs20 + 3;
         font-weight: 700;
       }
       .rating {
@@ -81,23 +81,22 @@
       .price {
         p {
           span:first-child {
-            font-family: mon_thin;
-            font-size: 23px;
-            font-weight: 600;
+            @include textStyle(mon_thin, $fs16, $fw6, $gray_400);
           }
           .price_item {
-            font-family: mon_regular;
-            font-size: 23px;
-            font-weight: 700;
+            @include textStyle(mon_regular, $fs20 + 3, $fw7, rgb(180, 0, 0));
           }
         }
         .add_cart_btn {
+          @include textStyle(mon_thin, $fs16, $fw4, rgb(206, 206, 206));
           border-radius: 0;
           background-color: $green_200;
-          padding: 0.5rem 0;
+          padding: 1rem 0;
           border: none;
           transition: 0.5s;
-          font-family: mon_thin;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           &:hover {
             background-color: $green_100;
           }

@@ -1,0 +1,47 @@
+#feed_back {
+  text-align: center;
+  h1 {
+    font-family: mon_bold;
+    font-size: 45px;
+  }
+  .feed_back_item {
+    .avatar {
+      width: 148px;
+      height: 148px;
+      background-color: white;
+      overflow: hidden;
+      border: 1px solid $gray_400;
+      border-radius: 100%;
+      margin: 2rem auto;
+      position: relative;
+      img {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .feed_back_text {
+      font-family: mon_thin;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .feed_back_user {
+      h6 {
+        font-family: mon_regular;
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 1rem;
+        line-height: 0;
+        letter-spacing: 1px;
+      }
+      span {
+        font-family: mon_thin;
+        font-size: 1rem;
+        font-weight: bold;
+        font-style: italic;
+      }
+    }
+  }
+}

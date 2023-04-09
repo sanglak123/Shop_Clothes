@@ -1,13 +1,34 @@
 html,
 body {
   font-family: mon_regular;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: $fs16;
+  font-weight: $fw4;
   box-sizing: border-box;
 }
-
-.brd_7 {
-  border-radius: 7px;
+#btn_backTop {
+  position: fixed;
+  bottom: 55px;
+  right: 5px;
+  z-index: 999;
+  background-color: transparent;
+  transform: rotate(-90deg);
+  border: none;
+  color: $gray_300;
+  transition: 0.5s;
+  &::after {
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: $gray_300;
+    display: block;
+    transition: 0.5s;
+  }
+  &:hover {
+    color: white;
+    &::after {
+      width: 100%;
+    }
+  }
 }
 .bsd {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -19,36 +40,11 @@ body {
 .bg_black {
   background-color: black !important;
 }
-.bg_green {
-  background-color: $green_400 !important;
-}
-.bg_blue_400 {
-  background-color: $blue_400 !important;
-}
-.bg_blue_300 {
-  background-color: $blue_300 !important;
-}
-.bg_blue_200 {
-  background-color: $blue_200 !important;
-}
-.bg_blue_100 {
-  background-color: $blue_100 !important;
-}
+
 .txt_white {
   color: white !important;
 }
-.txt_blue_400 {
-  color: $blue_400 !important;
-}
-.txt_blue_300 {
-  color: $blue_300 !important;
-}
-.txt_blue_200 {
-  color: $blue_200 !important;
-}
-.txt_blue_100 {
-  color: $blue_100 !important;
-}
+
 .txt_center {
   text-align: center;
 }
@@ -74,7 +70,19 @@ body {
   margin: 0 auto;
 }
 
-//Font size
-.fs30 {
-  font-size: 30px;
+.hide {
+  display: none;
+}
+.header_fix {
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.774);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  .nav_top {
+    background-color: transparent !important;
+  }
 }

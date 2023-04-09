@@ -1,0 +1,25 @@
+#categorys {
+  .categorys_content {
+    display: flex;
+    margin: $mg30 0;
+    .cate_left {
+      width: 20%;
+      margin: 0 auto;
+      .cate_search {
+        padding: $pd20;
+        input {
+          width: 100%;
+          padding: $pd10;
+          border: 1px solid $green_100;
+          &:focus-visible {
+            outline: none;
+          }
+        }
+      }
+    }
+    .cate_right {
+      width: 75%;
+      margin: 0 auto;
+    }
+  }
+}

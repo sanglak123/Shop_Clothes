@@ -1,0 +1,24 @@
+#brands_slide {
+  text-align: center;
+  h1 {
+    font-family: mon_bold;
+    font-size: 45px;
+  }
+  .brands_item {
+    .logo {
+      padding: 1.5rem;
+      width: 300px;
+      height: 150px;
+      overflow: hidden;
+      position: relative;
+      img {
+        max-width: 250px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2rem;
+      }
+    }
+  }
+}

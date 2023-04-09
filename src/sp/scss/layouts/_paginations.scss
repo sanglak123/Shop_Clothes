@@ -1,0 +1,50 @@
+#Paginations {
+  button {
+    width: 50px;
+    height: 50px;
+    border: 1px solid $gray_400;
+    background-color: white;
+    color: $gray_400;
+    margin: 0 $mg5 - 2;
+    border-radius: 0;
+    transition: 0.5s;
+    span {
+      line-height: calc(100% + 13px);
+      text-align: center;
+      transition: 0.5s;
+    }
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  .btn_next {
+    &:hover {
+      span {
+        transform: translateX(25px);
+        color: $gray_500;
+      }
+    }
+  }
+
+  .btn_prev {
+    span {
+      transform: rotate(180deg);
+    }
+    &:hover {
+      span {
+        transform: rotate(180deg) translateX(25px) !important;
+        color: $gray_500;
+      }
+    }
+  }
+  .btn_number {
+    background-color: white;
+    color: $gray_400;
+    &.active {
+      background-color: black;
+      color: white;
+    }
+  }
+}

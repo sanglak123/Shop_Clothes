@@ -1,5 +1,7 @@
 import Carousels from "@/components/Carousels";
 import Cards_Fashion from "@/layouts/Cards";
+import Feed_Back from "@/layouts/Feed_Back";
+import Brands from "@/layouts/Brands";
 import Head from "next/head";
 import { Col, Row } from "react-bootstrap";
 
@@ -17,8 +19,8 @@ export default function Home() {
         <div className="w-95">
           <div className="discount mt-5 mb-5 p-5">
             <Row>
-              <Col xs={4}>
-                <div className="discount_item">
+              <Col xs={12} sm={12} md={6} xl={4}>
+                <div className="discount_item sm-mb-4">
                   <div className="item_content">
                     <div className="overlay"></div>
                     <div className="discount_info">
@@ -28,7 +30,8 @@ export default function Home() {
                   </div>
                 </div>
               </Col>
-              <Col xs={4}>
+
+              <Col xs={12} sm={12} md={6} xl={4}>
                 <div className="discount_item">
                   <div className="item_content">
                     <div className="overlay"></div>
@@ -39,7 +42,8 @@ export default function Home() {
                   </div>
                 </div>
               </Col>
-              <Col xs={4}>
+
+              <Col xs={12} sm={12} md={6} xl={4}>
                 <div className="discount_item">
                   <div className="item_content">
                     <div className="overlay"></div>
@@ -52,23 +56,24 @@ export default function Home() {
               </Col>
             </Row>
           </div>
-          <section>
+
+          <section id="trend">
             <div className="fashion_trend mt-5 mb-5">
               <div className="trend_header mb-4">
                 <h4>FASHION WOMENT TREND</h4>
               </div>
               <div className="trend_items">
                 <Row>
-                  <Col xs={3}>
+                  <Col xs={12} sm={6} md={6} xl={6} xxl={3}>
                     <Cards_Fashion url={"/img/product/women/1.jpg"} />
                   </Col>
-                  <Col xs={3}>
+                  <Col xs={12} sm={6} md={6} xl={6} xxl={3}>
                     <Cards_Fashion url={"/img/product/women/2.jpg"} />
                   </Col>
-                  <Col xs={3}>
+                  <Col xs={12} sm={6} md={6} xl={6} xxl={3}>
                     <Cards_Fashion url={"/img/product/women/3.jpg"} />
                   </Col>
-                  <Col xs={3}>
+                  <Col xs={12} sm={6} md={6} xl={6} xxl={3}>
                     <Cards_Fashion url={"/img/product/women/4.jpg"} />
                   </Col>
                 </Row>
@@ -81,16 +86,16 @@ export default function Home() {
               </div>
               <div className="trend_items">
                 <Row>
-                  <Col xs={3}>
+                  <Col xs={12} sm={6} md={6} xl={6} xxl={3}>
                     <Cards_Fashion url={"/img/product/men/1.jpg"} />
                   </Col>
-                  <Col xs={3}>
+                  <Col xs={12} sm={6} md={6} xl={6} xxl={3}>
                     <Cards_Fashion url={"/img/product/men/2.jpg"} />
                   </Col>
-                  <Col xs={3}>
+                  <Col xs={12} sm={6} md={6} xl={6} xxl={3}>
                     <Cards_Fashion url={"/img/product/men/3.jpg"} />
                   </Col>
-                  <Col xs={3}>
+                  <Col xs={12} sm={6} md={6} xl={6} xxl={3}>
                     <Cards_Fashion url={"/img/product/men/4.jpg"} />
                   </Col>
                 </Row>
@@ -103,21 +108,33 @@ export default function Home() {
               </div>
               <div className="trend_items">
                 <Row>
-                  <Col xs={3}>
+                  <Col xs={12} sm={6} md={6} xl={6} xxl={3}>
                     <Cards_Fashion url={"/img/product/kid/1.jpg"} />
                   </Col>
-                  <Col xs={3}>
+                  <Col xs={12} sm={6} md={6} xl={6} xxl={3}>
                     <Cards_Fashion url={"/img/product/kid/2.jpg"} />
                   </Col>
-                  <Col xs={3}>
+                  <Col xs={12} sm={6} md={6} xl={6} xxl={3}>
                     <Cards_Fashion url={"/img/product/kid/3.jpg"} />
                   </Col>
-                  <Col xs={3}>
+                  <Col xs={12} sm={6} md={6} xl={6} xxl={3}>
                     <Cards_Fashion url={"/img/product/kid/4.jpg"} />
                   </Col>
                 </Row>
               </div>
             </div>
+          </section>
+
+          <section id="feedback">
+            <div id="feedback_content">
+              <div className="w-95">
+                <Feed_Back />
+              </div>
+            </div>
+          </section>
+
+          <section id="brands">
+            <Brands />
           </section>
         </div>
       </div>

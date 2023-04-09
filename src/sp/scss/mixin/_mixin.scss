@@ -1,0 +1,6 @@
+@mixin textStyle($ff, $fs, $fw, $cl) {
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw;
+  color: $cl;
+}

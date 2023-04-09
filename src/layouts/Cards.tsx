@@ -46,7 +46,12 @@ const Cards_Fashion = (props: image) => {
               {" - "}
               <span className="ms-2 price_item">$12</span>
             </p>
-            <Button className="add_cart_btn w-100">ADD TO CART</Button>
+            <Button className="add_cart_btn w-100">
+              <span className="material-symbols-outlined me-3">
+                shopping_cart
+              </span>
+              <span className="txt_white">Add To Cart</span>
+            </Button>
           </div>
         </div>
       </div>

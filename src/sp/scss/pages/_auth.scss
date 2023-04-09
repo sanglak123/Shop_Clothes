@@ -1,0 +1,70 @@
+#auth {
+  .auth_content {
+    width: 50%;
+    margin: $mg40 auto;
+    padding: 60px;
+    .auth_header {
+      .logo {
+        text-align: center;
+        margin: $mg40 0;
+        h1 {
+          @include textStyle(mon_bold, $fs50 + 50, $fw7, $green_100);
+          letter-spacing: 10px;
+          line-height: 0.7;
+        }
+        span {
+          @include textStyle(mon_thin, $fs20, $fw7, $green_100);
+          letter-spacing: 20px;
+        }
+      }
+    }
+    .auth_item {
+      span {
+        @include textStyle(mon_regular, $fs16, $fw7, black);
+      }
+      .auth_input {
+        .input_item {
+          margin: $mg10 0;
+          label {
+            display: block;
+            margin-bottom: $mg5;
+          }
+          input {
+            width: 100%;
+            padding: $pd10;
+            border-radius: 7px;
+            border: 1px solid $green_100;
+            &:focus-visible {
+              outline: none !important;
+            }
+          }
+          span {
+            display: block;
+            @include textStyle(mon_thin, $fs16, $fw7, red);
+          }
+        }
+      }
+      .auth_link {
+        text-align: right;
+        .link_item {
+          button,
+          a {
+            background-color: transparent;
+            border: none;
+            color: $gray_400;
+            text-decoration: none;
+            margin: $mg10 $mg5;
+            transition: 0.5s;
+            &:hover {
+              text-decoration: underline;
+              color: $green_100;
+            }
+          }
+        }
+      }
+      .auth_btn {
+        text-align: right;
+      }
+    }
+  }
+}
