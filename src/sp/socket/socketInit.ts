@@ -1,10 +1,10 @@
 import React from "react";
 import * as socketClient from "socket.io-client";
 
-import { baseURL } from "@/data/config/axios_client";
 import { AppDispatch } from "../redux/store";
+import { baseURL } from "@/data/api/config/rootAxios";
 
-export const socket = socketClient.connect(baseURL, {
+export const socket = socketClient.connect(baseURL as string, {
   path: "/api/socketio",
 });
 export const SockeContext = React.createContext<any | null>(null);
@@ -15,7 +15,7 @@ export const handleEvents = (
   dispatch: AppDispatch,
   accessToken: string
 ) => {
-  socket.on("re_events", async (data) => {
+  socket.on("re_events", async (data: any) => {
     if (data.to === User?.userName) {
       if (data.action === "Create_refill") {
         //Admin cập nhật refills
